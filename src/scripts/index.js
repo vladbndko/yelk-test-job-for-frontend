@@ -29,7 +29,7 @@ airportsRoutesModalCloseElement.addEventListener('click', (e) => {
 });
 
 window.addEventListener('keydown', (e) => {
-  if (e.code === 'Escape' && airportRoutesVisibility.get().visibility) {
+  if (e.code === 'Escape' && airportRoutesVisibility.get()) {
     setAirportRoutesVisibility(false);
   }
 });
