@@ -11,7 +11,7 @@ import {
 
 import { airports, setAirports } from './stores/airports';
 import { airportsLoading, setAirportsLoading } from './stores/airports-loading';
-import { searchTerm, setSearchTerm } from './stores/searchTerm';
+import { searchTerm, setSearchTerm } from './stores/search-term';
 
 const airportsItemsElement = document.getElementById('airports-items');
 const airportsLoaderElement = document.getElementById('airports-loader');
@@ -113,6 +113,7 @@ airportRoutesLoading.listen(() => {
 
 airportRoutesVisibility.listen(() => {
   airportsRoutesModalElement.classList[airportRoutesVisibility.get() ? 'remove' : 'add']('hidden');
+  setAirportRoutes([]);
 });
 
 airportRoutes.listen(() => {
